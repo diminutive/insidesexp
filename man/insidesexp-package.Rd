@@ -8,6 +8,14 @@
 \description{
 What the package does (one paragraph).
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/mdsumner/insidesexp}
+  \item Report bugs at \url{https://github.com/mdsumner/insidesexp/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Michael D. Sumner \email{mdsumner@gmail.com}
 

@@ -1,35 +1,21 @@
----
-output: github_document
-editor_options: 
-  chunk_output_type: console
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
 
 # insidesexp
 
 <!-- badges: start -->
+
 [![R-CMD-check](https://github.com/diminutive/insidesexp/workflows/R-CMD-check/badge.svg)](https://github.com/diminutive/insidesexp/actions)
 <!-- badges: end -->
 
-The goal of insidesexp is to do fast point in polygon classification, with SEXP and possibly without some of the sp scaffolding
+The goal of insidesexp is to do fast point in polygon classification,
+with SEXP and possibly without some of the sp scaffolding
 
+We are comparing a few ways of implementing this, essentially O’Rourke
+Ch 7 and assuming bbox cull upstream, and ring classification down (for
+hole status).
 
-We are comparing a few ways of implementing this, essentially O'Rourke Ch 7 and assuming bbox cull upstream, and ring classification down (for hole status). 
-
-
-
-```{r example}
-
+``` r
 coords = structure(c(0.191915028329653, 0.242440023683676, 
                      0.435140005964137, 0.750039977007818, 0.794689972902072, 
                      0.569089993646897, 0.308240017633102, 0.191915028329653, 
@@ -44,10 +30,12 @@ pts <- structure(c(0.193090028221607, 0.134340033623905, 0.194265028113561,
                    0.306076580009597, 0.187699353600361, 0.506241708301578), .Dim = c(7L, 
                                                                                       2L), .Dimnames = list(NULL, c("x", "y")))
 insidesexp::inside_sexp(pts, coords)
-
-
+#> [1] 0 0 0 1 1 0 0
 ```
 
 ## Code of Conduct
-  
-  Please note that the insidesexp project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+
+Please note that the insidesexp project is released with a [Contributor
+Code of
+Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.

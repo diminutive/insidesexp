@@ -1,3 +1,6 @@
 ^insidesexp\.Rproj$
 ^\.Rproj\.user$
 ^README\.Rmd$
+^LICENSE\.md$
+^\.github$
+^CODE_OF_CONDUCT\.md$
